@@ -33,6 +33,10 @@ Vctr = VDD.C_0/(C_0+Cpar)
 ![image](https://user-images.githubusercontent.com/81389879/155845704-557510ea-b1de-4496-adcd-a9531c584793.png)
 
 
+- ### Acknowledgements
+[Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](#https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
+Cloud Based Analog IC Design Hackathon
+Synopsys India
 
 - ## REFERENCES
 - efg
