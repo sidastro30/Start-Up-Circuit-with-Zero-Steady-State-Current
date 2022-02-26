@@ -8,7 +8,7 @@ A start-up circuit provide significant role in voltage &amp; current ref. circui
 Vctr = VDD.C_0/(C_0+Cpar)
   - Normally Cpar is very low so C_0 could be taken in the range of pf then Vctr equivalent to Vdd. Hence M5 will go ON as Vdd rises, which will generate a start-up current Ist in M5 that will start discharging node psig towards gnd and the ref. circuit will start. As the current starts flowing in the ref. circuit, nsig will start charging from gnd towards VDD and as it crosses VT(M4), it will turn ON and node ctr will be pulled down to gnd, which will turn off M5. So, the start-up circuit will be disconnected from the reference circuit and no current flows through it.
 
-- ## Conventional start-up circuit
+- ### Conventional start-up circuit
   - On comparing with a conventional start-up circuit shown in Fig 4. The start-up has pmos (M1) and nmos (M0), M5 and M6. Cb(bypass). Fig3 shows the simulation results of the circuit. After the ref. circuit settles at its required operating state, M0 goes on and a constant current starts flowing through M0 and M1. Thus, conventional start-up circuit continues to consume current even after the ref. circuit started. Value of consumed current depends upon the start-up time required. For a low start-up time, a high current is required causing extra power consumption in the circuit. As is clear from Fig3, for Cb in pF range and for usec range start-up time for the ref. circuit, the constant current which flows in M0 is in uAmp range, which is high for low power circuits. It is clear from Fig2 that current Ist becomes 0 when the circuit settles to its required operating point and thus consumes no DC current.
 
 - ## REFERENCES
