@@ -7,7 +7,8 @@ A start-up circuit provide significant role in voltage &amp; current ref. circui
   - Vdd Ramp-up: Using C_0 capacitor between supply and crt line Vdd ramp-Up achieved. When Vdd is ramping up from zero volts, node ctr follows to Vdd to maintain zero potential across capacitor C_0. The parasitic capacitance (Cpar) between node ctr and gnd will form a voltage divider with C_0. The voltage at ctr may be written as:
 Vctr = VDD.C_0/(C_0+Cpar)
   - Normally Cpar is very low so C_0 could be taken in the range of pf then Vctr equivalent to Vdd. Hence M5 will go ON as Vdd rises, which will generate a start-up current Ist in M5 that will start discharging node psig towards gnd and the ref. circuit will start. As the current starts flowing in the ref. circuit, nsig will start charging from gnd towards VDD and as it crosses VT(M4), it will turn ON and node ctr will be pulled down to gnd, which will turn off M5. So, the start-up circuit will be disconnected from the reference circuit and no current flows through it.
-  - ![image](https://user-images.githubusercontent.com/81389879/155842067-f2f60ca1-3fe7-4747-951d-30644e9d381f.png)
+  - ![image](https://user-images.githubusercontent.com/81389879/155842296-f0b8bdfb-f49c-4c77-863b-9d83e199e1cf.png)
+
 
 
 - ### Conventional start-up circuit
