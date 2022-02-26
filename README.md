@@ -13,6 +13,8 @@ Vctr = VDD.C_0/(C_0+Cpar)
 
 - ### Conventional start-up circuit
   - On comparing with a conventional start-up circuit shown in Fig 4. The start-up has pmos (M1) and nmos (M0), M5 and M6. Cb(bypass). Fig3 shows the simulation results of the circuit. After the ref. circuit settles at its required operating state, M0 goes on and a constant current starts flowing through M0 and M1. Thus, conventional start-up circuit continues to consume current even after the ref. circuit started. Value of consumed current depends upon the start-up time required. For a low start-up time, a high current is required causing extra power consumption in the circuit. As is clear from Fig3, for Cb in pF range and for usec range start-up time for the ref. circuit, the constant current which flows in M0 is in uAmp range, which is high for low power circuits. It is clear from Fig2 that current Ist becomes 0 when the circuit settles to its required operating point and thus consumes no DC current.
+![image](https://user-images.githubusercontent.com/81389879/155843042-19885f98-005e-40c3-a2f5-63b521e32886.png)
+
 
 - ## REFERENCES
 - efg
