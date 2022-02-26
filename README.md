@@ -33,11 +33,13 @@ Vctr = VDD.C_0/(C_0+Cpar)
 ![image](https://user-images.githubusercontent.com/81389879/155845704-557510ea-b1de-4496-adcd-a9531c584793.png)
 
 
-- ### Acknowledgements
+- ## Acknowledgements
   - [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/)
   - [Electrical Engineering Department of IIT Hyderabad, Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
   - [Synopsys India](https://www.synopsys.com/)
 
 - ## REFERENCES
-- efg
+[1] Design of Analog CMOS integrated Circuits, Behzad Razavi, Mc Graw Hill, page-400
+[2] Cypress (Infineo),“Start-Up Circuit for Band-Gap Reference circuit”, US Patent 5,867,013
+[3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
 
