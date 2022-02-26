@@ -39,7 +39,7 @@ Vctr = VDD.C_0/(C_0+Cpar)
   - [Synopsys India](https://www.synopsys.com/)
 
 - ## REFERENCES
-[1] Design of Analog CMOS integrated Circuits, Behzad Razavi, Mc Graw Hill, page-400
-[2] Cypress (Infineo),“Start-Up Circuit for Band-Gap Reference circuit”, US Patent 5,867,013
-[3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
+  - [1] Design of Analog CMOS integrated Circuits, Behzad Razavi, Mc Graw Hill, page-400
+  - [2] Cypress (Infineo),“Start-Up Circuit for Band-Gap Reference circuit”, US Patent 5,867,013
+  - [3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
 
