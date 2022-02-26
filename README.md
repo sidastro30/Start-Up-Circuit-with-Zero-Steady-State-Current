@@ -9,6 +9,9 @@ Vctr = VDD.C_0/(C_0+Cpar)
   - Normally Cpar is very low so C_0 could be taken in the range of pf then Vctr equivalent to Vdd. Hence M5 will go ON as Vdd rises, which will generate a start-up current Ist in M5 that will start discharging node psig towards gnd and the ref. circuit will start. As the current starts flowing in the ref. circuit, nsig will start charging from gnd towards VDD and as it crosses VT(M4), it will turn ON and node ctr will be pulled down to gnd, which will turn off M5. So, the start-up circuit will be disconnected from the reference circuit and no current flows through it.
 ![image](https://user-images.githubusercontent.com/81389879/155842296-f0b8bdfb-f49c-4c77-863b-9d83e199e1cf.png)
 ![image](https://user-images.githubusercontent.com/81389879/155844351-72d6f918-e667-43c5-9ab5-8d8e945356f4.png)
+![image](https://user-images.githubusercontent.com/81389879/155845588-a32219ae-7dd8-462d-bacf-62c0cb757215.png)
+![image](https://user-images.githubusercontent.com/81389879/155845609-5c3c1192-097c-4759-baa3-c8a6865b359b.png)
+
 
 
 
