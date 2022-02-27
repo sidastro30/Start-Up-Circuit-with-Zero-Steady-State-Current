@@ -49,7 +49,7 @@ Startup circuit with zero steady state current have been simulated. Unlike conve
  - [2] Cypress (Infineon),“Start-Up Circuit for Band-Gap Reference circuit”, US Patent 5,867,013
  - [3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
 
-'''
+```
 *  Generated for: PrimeSim
 *  Design library name: Ref_Start_Up
 *  Design cell name: ref_ckt
@@ -116,5 +116,5 @@ v54 input gnd! dc=0 pulse ( 0 1.8 0 0.1u 0 0 0 )
 
 .end
 
-'''
+```
 
