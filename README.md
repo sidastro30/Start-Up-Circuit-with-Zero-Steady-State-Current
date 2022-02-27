@@ -49,6 +49,78 @@ Startup circuit with zero steady state current have been simulated. Unlike conve
  - [2] Cypress (Infineon),“Start-Up Circuit for Band-Gap Reference circuit”, US Patent 5,867,013
  - [3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
 
+- ## Netlist
+  - Start-Up Circuit with power down & Vdd Ramp-up 
+```
+*  Generated for: PrimeSim
+*  Design library name: Ref_startup_adv
+*  Design cell name: ref_i_low
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Sun Feb 27 07:36:43 2022
+
+.global gnd!
+********************************************************************************
+* Library          : Ref_startup_adv
+* Cell             : ref_i_low
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xm8 ctrl not_gate_op vcc_1_8 vcc_1_8 p105 w=0.1u l=0.03u nf=1 m=1
+xm4 nsig net3 vcc_1_8 vcc_1_8 p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net3 not_gate_op vcc_1_8 vcc_1_8 p105 w=0.1u l=0.03u nf=1 m=1
+xm1 psig net3 vcc_1_8 vcc_1_8 p105 w=0.1u l=0.03u nf=1 m=1
+xm0 not_gate_op input vcc_1_8 vcc_1_8 p105 w=0.1u l=0.03u nf=1 m=1
+xm7 ctrl nsig gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm6 id6_v2_maincurrent ctrl gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm5 id5_v2 not_gate_op id6_v1 id6_v1 n105 w=0.1u l=0.03u nf=1 m=1
+xm18 net4 input gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm17 nsig net4 gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm19 psig net4 net2 gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm20 not_gate_op input gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+r11 psig id5_v2 r=1
+r10 id6_v1 id6_v2_maincurrent r=1
+r28 net2 gnd! r=1k
+c9 vcc_1_8 ctrl c=0.7p
+c29 vcc_1_8 net3 c=2p
+v50 vcc_1_8 gnd! dc=1.8
+v33 input gnd! dc=0 pulse ( 0 1.8 0 0.1u 0 0 0 )
+
+
+
+
+
+
+
+
+.tran '0.001*(0.2-0)' '0.2' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(id5_v2) v(id6_v1) v(id6_v2_maincurrent) v(ctrl) v(input)
++ v(not_gate_op) v(nsig) v(psig)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+
+```
+  - Conventional Start-Up
 ```
 *  Generated for: PrimeSim
 *  Design library name: Ref_Start_Up
