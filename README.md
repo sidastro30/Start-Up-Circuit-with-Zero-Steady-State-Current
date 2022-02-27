@@ -37,6 +37,7 @@ On comparing with a conventional start-up circuit shown in Fig 4. The start-up h
 Startup circuit with zero steady state current have been simulated. Unlike conventional startup circuit,Startup circuit with zero steady state current completely turned OFF once the reference circuit is started. Since the circuit consume no steady state current in the normal operation of the reference circuit, a very low startup time is achieved with low power consumption. The circuit can be used with any kind of voltage or current reference circuits that need startup circuit.
 
 - ![image](https://user-images.githubusercontent.com/81389879/155874018-fed073f8-7c6f-4229-82b5-b562ac791406.png)
+  - Start-Up Circuit with power down & Vdd Ramp-up(left),Conventional Start-Up(right)
 
 - ## Acknowledgements
   - [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/)
