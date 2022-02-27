@@ -1,0 +1,65 @@
+*  Generated for: PrimeSim
+*  Design library name: Ref_Start_Up
+*  Design cell name: ref_ckt
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Sun Feb 27 07:26:37 2022
+
+.global gnd!
+********************************************************************************
+* Library          : Ref_Start_Up
+* Cell             : ref_ckt
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xm4 nsig net16 net99 net99 p105 w=0.1u l=0.03u nf=1 m=1
+xm5 ctrl ctrl net99 net99 p105 w=0.1u l=0.03u nf=1 m=1
+xm2 net16 not_gate_op net99 net99 p105 w=0.1u l=0.03u nf=1 m=1
+xm1 psig net16 net99 net99 p105 w=0.1u l=0.03u nf=1 m=1
+xm0 not_gate_op input net99 net99 p105 w=0.1u l=0.03u nf=1 m=1
+xm12 ctrl ctrl gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm15 id15_v2_maincurrent nsig gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm16 id6_v2 ctrl gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm18 net59 input gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm17 nsig net59 gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm19 psig net59 net109 gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm20 not_gate_op input gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+r53 ctrl id15_v2_maincurrent r=1
+r51 id6_v2 psig r=1
+r28 net109 gnd! r=1k
+c29 net99 net16 c=2p
+v50 net99 gnd! dc=1.8
+v54 input gnd! dc=0 pulse ( 0 1.8 0 0.1u 0 0 0 )
+
+
+
+
+
+
+
+
+.tran '0.001*(0.2-0)' '0.2' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(id15_v2_maincurrent) v(id6_v2) v(ctrl) v(input) v(not_gate_op)
++ v(nsig) v(psig)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
