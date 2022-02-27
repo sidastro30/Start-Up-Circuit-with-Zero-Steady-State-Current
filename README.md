@@ -23,7 +23,7 @@ Vctr = VDD.C9/(C9+Cpar)
 
 
 - ### Conventional start-up circuit
-  - On comparing with a conventional start-up circuit shown in Fig 4. The start-up has pmos (M5) and nmos (M15), M16 and M12. Cb(bypass). Fig4a,b,c shows the simulation results of the circuit. After the ref. circuit settles at its required operating state, M15 goes on and a constant current starts flowing through M15 and M5. Thus, conventional start-up circuit continues to consume current even after the ref. circuit started. Value of consumed current depends upon the start-up time required. For a low start-up time, a high current is required causing extra power consumption in the circuit. As is clear from Fig4a,b,c, for C29 in pF range and for usec range start-up time for the ref. circuit, the constant current which flows in M15 is in uAmp range, which is high for low power circuits. It is clear from Fig1a,1b,1c that current Ist becomes 0 when the circuit settles to its required operating point and thus consumes no DC current.
+  - On comparing with a conventional start-up circuit shown in Fig 4. The start-up has pmos (M5) and nmos (M15), M16 and M12. C29(bypass). Fig4a,b,c shows the simulation results of the circuit. After the ref. circuit settles at its required operating state, M15 goes on and a constant current starts flowing through M15 and M5. Thus, conventional start-up circuit continues to consume current even after the ref. circuit started. Value of consumed current depends upon the start-up time required. For a low start-up time, a high current is required causing extra power consumption in the circuit. As is clear from Fig4a,b,c, for C29 in pF range and for usec range start-up time for the ref. circuit, the constant current which flows in M15 is in uAmp range, which is high for low power circuits. It is clear from Fig1a,1b,1c that current Ist becomes 0 when the circuit settles to its required operating point and thus consumes no DC current.
 - ##### Conventional Start-Up Circuit (Fig 4)
 ![image](https://user-images.githubusercontent.com/81389879/155843042-19885f98-005e-40c3-a2f5-63b521e32886.png)
 - ##### Transient (Ramp-UP) (Fig4c)
@@ -33,7 +33,8 @@ Vctr = VDD.C9/(C9+Cpar)
 - ##### Steady State (State-Power Down) (Fig4c)
 ![image](https://user-images.githubusercontent.com/81389879/155845704-557510ea-b1de-4496-adcd-a9531c584793.png)
 
-
+- ## Conclusion
+Startup circuit with zero steady state current have been simulated. Unlike conventional startup circuit,Startup circuit with zero steady state current completely turned OFF once the reference circuit is started. Since the circuit consume no steady state current in the normal operation of the reference circuit, a very low startup time is achieved with low power consumption. The circuit can be used with any kind of voltage or current reference circuits that need startup circuit.
 - ## Acknowledgements
   - [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/)
   - [Electrical Engineering Department of IIT Hyderabad, Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
