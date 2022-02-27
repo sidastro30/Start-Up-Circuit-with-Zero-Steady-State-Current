@@ -6,7 +6,7 @@ This repository presents the design of Start-Up Circuit with Zero Steady State C
 ### Table Of Content
 
  - [Introduction](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#introduction)
- - [Circuit Description](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current/edit/main/README.md#circuit-description)
+ - [Circuit Description](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#circuit-description)
    - [Start-Up circuit with power down signal & Vdd ramp-up](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#start-up-circuit-with-power-down-signal--vdd-ramp-up)
      - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist)
    - [Conventional start-up circuit](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conventional-start-up-circuit)
