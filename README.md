@@ -1,7 +1,9 @@
-
+This repository presents the design of Start-Up Circuit with Zero Steady State Current. It is implemented on Synopsys Custom Compiler in 28nm technology node.
 - # Start-Up Circuit with Zero Steady State Current
-A start-up circuit provide significant role in voltage &amp; current ref. circuit which brings out the ref. circuit from zero current operating point to normal operating point and then is no longer used once the reference circuit starts operating properly. A conventional start-up circuit continues to consume constant current(mA) even after giving start-up. Thus increases the overall power consumption of circuit. This power can be multiple in numbers to bias generator circuits are deployed in a single chip, consequently reducing battery life or incresing the overall power. The start-up circuit discussed here overcome the above drawback as they turn off completely once the ref. circuit starts operating properly. By this circuit low power in IC design and small start-up time can be achieved.
+ 
 
+Table Of Content
+- [Introduction]()
 - [Circuit Description](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current/edit/main/README.md#circuit-description)
   - [Start-Up circuit with power down signal & Vdd ramp-up](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#start-up-circuit-with-power-down-signal--vdd-ramp-up)
     - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist)
@@ -9,7 +11,10 @@ A start-up circuit provide significant role in voltage &amp; current ref. circui
     - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist-1)  
 - [Conclusion](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conclusion)
 - [Acknowledgements](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#acknowledgements) 
-- [References](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#references) 
+- [References](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#references)
+- [Tool used]() 
+- ##Introduction 
+A start-up circuit provide significant role in voltage &amp; current ref. circuit which brings out the ref. circuit from zero current operating point to normal operating point and then is no longer used once the reference circuit starts operating properly. A conventional start-up circuit continues to consume constant current(mA) even after giving start-up. Thus increases the overall power consumption of circuit. This power can be multiple in numbers to bias generator circuits are deployed in a single chip, consequently reducing battery life or incresing the overall power. The start-up circuit discussed here overcome the above drawback as they turn off completely once the ref. circuit starts operating properly. By this circuit low power in IC design and small start-up time can be achieved.
 
 - ## Circuit Description
 - ### Start-Up circuit with power down signal & Vdd ramp-up
