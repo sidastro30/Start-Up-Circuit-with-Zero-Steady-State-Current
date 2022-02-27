@@ -58,6 +58,11 @@ Startup circuit with zero steady state current have been simulated. Unlike conve
  - [1] Design of Analog CMOS integrated Circuits, Behzad Razavi, Mc Graw Hill, page-400
  - [2] Cypress (Infineon),“Start-Up Circuit for Band-Gap Reference circuit”, US Patent 5,867,013
  - [3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
+ 
+- ## Tool used
+  - Synopsys Custom Compiler:  The Synopsys Custom Compiler™ design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
+  - Synopsys Primewave:  PrimeWave™ Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. This tool helped in various types of simulations of the above designed circuit.
+Synopsys 28nm PDK:  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above circuit design.
 
 - ## Netlist
   Start-Up Circuit with power down & Vdd Ramp-up 
