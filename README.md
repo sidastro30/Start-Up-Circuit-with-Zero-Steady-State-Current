@@ -2,6 +2,15 @@
 - # Start-Up Circuit with Zero Steady State Current
 A start-up circuit provide significant role in voltage &amp; current ref. circuit which brings out the ref. circuit from zero current operating point to normal operating point and then is no longer used once the reference circuit starts operating properly. A conventional start-up circuit continues to consume constant current(mA) even after giving start-up. Thus increases the overall power consumption of circuit. This power can be multiple in numbers to bias generator circuits are deployed in a single chip, consequently reducing battery life or incresing the overall power. The start-up circuit discussed here overcome the above drawback as they turn off completely once the ref. circuit starts operating properly. By this circuit low power in IC design and small start-up time can be achieved.
 
+- [Circuit Description](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current/edit/main/README.md#circuit-description)
+  - [Start-Up circuit with power down signal & Vdd ramp-up](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#start-up-circuit-with-power-down-signal--vdd-ramp-up)
+    - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist)
+  - [Conventional start-up circuit](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conventional-start-up-circuit)
+    - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist-1)  
+- [Conclusion](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conclusion)
+- [Acknowledgements](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#acknowledgements) 
+- [References](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#references) 
+
 - ## Circuit Description
 - ### Start-Up circuit with power down signal & Vdd ramp-up
   - Start-Up circuit work with a power down signal. The Power-down (pwd) signal is used to keep the current or voltage reference circuit in idle or reset mode. When the power down signal is apply, nodes psig and nsig are pulled to supply and ground and then no current(mA) flows into the ref. circuit. Circuit should come to its normal function when the pwd signal is down but it doesn’t as there is no path-to-discharge the node psig or nsig. Start-Up circuit is required to charge the node nsig or discharge the node psig, which starts a current into the ref. circuit until the circuit comes to its normal state.
@@ -40,9 +49,10 @@ Startup circuit with zero steady state current have been simulated. Unlike conve
   - Fig3. Steady State :  Start-Up Circuit with power down & Vdd Ramp-up(left),Conventional Start-Up(right)
 
 - ## Acknowledgements
+  - [Synopsys India](https://www.synopsys.com/)
   - [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/)
   - [Electrical Engineering Department of IIT Hyderabad, Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
-  - [Synopsys India](https://www.synopsys.com/)
+  
 
 - ## References
  - [1] Design of Analog CMOS integrated Circuits, Behzad Razavi, Mc Graw Hill, page-400
