@@ -1,22 +1,25 @@
+# Start-Up Circuit with Zero Steady State Current
 This repository presents the design of Start-Up Circuit with Zero Steady State Current. It is implemented on Synopsys Custom Compiler in 28nm technology node.
-- # Start-Up Circuit with Zero Steady State Current
+
  
 
-Table Of Content
-- [Introduction]()
-- [Circuit Description](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current/edit/main/README.md#circuit-description)
-  - [Start-Up circuit with power down signal & Vdd ramp-up](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#start-up-circuit-with-power-down-signal--vdd-ramp-up)
-    - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist)
-  - [Conventional start-up circuit](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conventional-start-up-circuit)
-    - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist-1)  
-- [Conclusion](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conclusion)
-- [Acknowledgements](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#acknowledgements) 
-- [References](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#references)
-- [Tool used]() 
-- ##Introduction 
+### Table Of Content
+
+ - [Introduction](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#introduction)
+ - [Circuit Description](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current/edit/main/README.md#circuit-description)
+   - [Start-Up circuit with power down signal & Vdd ramp-up](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#start-up-circuit-with-power-down-signal--vdd-ramp-up)
+     - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist)
+   - [Conventional start-up circuit](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conventional-start-up-circuit)
+     - [Netlist](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#netlist-1)  
+ - [Conclusion](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#conclusion)
+ - [Acknowledgements](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#acknowledgements) 
+ - [References](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#references)
+ - [Tool used](https://github.com/sidastro30/Start-Up-Circuit-with-Zero-Steady-State-Current#tool-used) 
+
+## Introduction 
 A start-up circuit provide significant role in voltage &amp; current ref. circuit which brings out the ref. circuit from zero current operating point to normal operating point and then is no longer used once the reference circuit starts operating properly. A conventional start-up circuit continues to consume constant current(mA) even after giving start-up. Thus increases the overall power consumption of circuit. This power can be multiple in numbers to bias generator circuits are deployed in a single chip, consequently reducing battery life or incresing the overall power. The start-up circuit discussed here overcome the above drawback as they turn off completely once the ref. circuit starts operating properly. By this circuit low power in IC design and small start-up time can be achieved.
 
-- ## Circuit Description
+## Circuit Description
 - ### Start-Up circuit with power down signal & Vdd ramp-up
   - Start-Up circuit work with a power down signal. The Power-down (pwd) signal is used to keep the current or voltage reference circuit in idle or reset mode. When the power down signal is apply, nodes psig and nsig are pulled to supply and ground and then no current(mA) flows into the ref. circuit. Circuit should come to its normal function when the pwd signal is down but it doesn’t as there is no path-to-discharge the node psig or nsig. Start-Up circuit is required to charge the node nsig or discharge the node psig, which starts a current into the ref. circuit until the circuit comes to its normal state.
   - Consider the circuit in Fig1, the start-up circuit comprises pmos M3 and nmos M7, M5 and M6. When the pwd signal is up, M5 is off and M3 pulls node ctrl to Vdd, which turns on     M6. As M6 is in series with M5, start-up current Ist will be zero. The nodes psig and nsig will be at Vdd and ground . There will be no current(Amp) in the reference circuit and M7 off. Now when the pwd signal down, M3 is off and M5 is on. Since nsig is at gnd, M7 will remain off, and node ctrl will remain at VDD. This will cause M6 to remain on. Now   M5 and M6 are ON and therefore current Ist starts flowing from the node psig, which will start discharging the node psig from VDD towards gnd. This starts a flow of current in M1 and M7. The flow of current in M7 starts charging the node nsig from gnd towards Vdd causing a current(mA) flow in M19 and M17. As the voltage nsig reaches a value greater than VT(M7), M7 is on and pulls node ctrl to gnd, hence turning off M6, which shuts off Ist. The value of Ist depends upon the size of M6, which can be adjusted according to the   required start-up time.
@@ -47,24 +50,24 @@ On comparing with a conventional start-up circuit shown in Fig 4. The start-up h
 - ##### Steady State (State-Power Down) (Fig4c)
 ![image](https://user-images.githubusercontent.com/81389879/155845704-557510ea-b1de-4496-adcd-a9531c584793.png)
 
-- ## Conclusion
+## Conclusion
 Startup circuit with zero steady state current have been simulated. Unlike conventional startup circuit,Startup circuit with zero steady state current completely turned OFF once the reference circuit is started. Since the circuit consume no steady state current in the normal operation of the reference circuit, a very low startup time is achieved with low power consumption. The circuit can be used with any kind of voltage or current reference circuits that need startup circuit.
 
 - ![image](https://user-images.githubusercontent.com/81389879/155874018-fed073f8-7c6f-4229-82b5-b562ac791406.png)
   - Fig3. Steady State :  Start-Up Circuit with power down & Vdd Ramp-up(left),Conventional Start-Up(right)
 
-- ## Acknowledgements
+## Acknowledgements
   - [Synopsys India](https://www.synopsys.com/)
   - [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/)
   - [Electrical Engineering Department of IIT Hyderabad, Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
   
 
-- ## References
+## References
  - [1] Design of Analog CMOS integrated Circuits, Behzad Razavi, Mc Graw Hill, page-400
  - [2] Cypress (Infineon),“Start-Up Circuit for Band-Gap Reference circuit”, US Patent 5,867,013
  - [3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
  
-- ## Tool used
+## Tool used
   - Synopsys Custom Compiler:  The Synopsys Custom Compiler™ design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
   - Synopsys Primewave:  PrimeWave™ Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. This tool helped in various types of simulations of the above designed circuit.
 Synopsys 28nm PDK:  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above circuit design.
