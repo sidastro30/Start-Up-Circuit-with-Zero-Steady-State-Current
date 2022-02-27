@@ -50,7 +50,7 @@ Startup circuit with zero steady state current have been simulated. Unlike conve
  - [3] Infineon, “System and Method for Low Power Start-up-Circuit for voltage reference”, US Patent 6,084,388
 
 - ## Netlist
-  - Start-Up Circuit with power down & Vdd Ramp-up 
+  1. Start-Up Circuit with power down & Vdd Ramp-up 
 ```
 *  Generated for: PrimeSim
 *  Design library name: Ref_startup_adv
@@ -120,7 +120,7 @@ v33 input gnd! dc=0 pulse ( 0 1.8 0 0.1u 0 0 0 )
 .end
 
 ```
-  - Conventional Start-Up
+  2. Conventional Start-Up
 ```
 *  Generated for: PrimeSim
 *  Design library name: Ref_Start_Up
