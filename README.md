@@ -29,6 +29,8 @@ A start-up circuit provide significant role in voltage &amp; current ref. circui
 Vctrl = VDD.C9/(C9+Cpar)
   - Normally Cpar is very low so C9 could be taken in the range of pf then Vctrl equivalent to Vdd. Hence M5 will go ON as Vdd rises, which will generate a start-up current Ist in M5 that will start discharging node psig towards gnd and the ref. circuit will start. As the current starts flowing in the ref. circuit, nsig will start charging from gnd towards VDD and as it crosses VT(M7), it will turn ON and node ctrl will be pulled down to gnd, which will turn off M5. So, the start-up circuit will be disconnected from the reference circuit and no current flows through it.
 - ##### Start-Up Circuit with power down & Vdd Ramp-up (Fig1)
+![image](https://user-images.githubusercontent.com/81389879/156209753-26125be0-8a4a-41f6-8f28-6e5498c81fc4.png)
+
 ![image](https://user-images.githubusercontent.com/81389879/155842296-f0b8bdfb-f49c-4c77-863b-9d83e199e1cf.png)
 - ##### Transient (Ramp-UP) (Fig1a)
 ![image](https://user-images.githubusercontent.com/81389879/155844351-72d6f918-e667-43c5-9ab5-8d8e945356f4.png)
@@ -44,6 +46,8 @@ Vctrl = VDD.C9/(C9+Cpar)
 - ### Conventional start-up circuit
 On comparing with a conventional start-up circuit shown in Fig 4. The start-up has pmos (M5) and nmos (M15), M16 and M12. C29(bypass). Fig4a,b,c shows the simulation results of the circuit. After the ref. circuit settles at its required operating state, M15 goes on and a constant current starts flowing through M15 and M5. Thus, conventional start-up circuit continues to consume current even after the ref. circuit started. Value of consumed current depends upon the start-up time required. For a low start-up time, a high current is required causing extra power consumption in the circuit. As is clear from Fig4a,b,c, for C29 in pF range and for usec range start-up time for the ref. circuit, the constant current which flows in M15 is in uAmp range, which is high for low power circuits. It is clear from Fig1a,1b,1c that current Ist becomes 0 when the circuit settles to its required operating point and thus consumes no DC current.
 - ##### Conventional Start-Up Circuit (Fig 4)
+![image](https://user-images.githubusercontent.com/81389879/156210211-3f85f5f3-d42c-4c3d-b3c6-423bd8978b2b.png)
+
 ![image](https://user-images.githubusercontent.com/81389879/155843042-19885f98-005e-40c3-a2f5-63b521e32886.png)
 - ##### Transient (Ramp-UP) (Fig4c)
 ![image](https://user-images.githubusercontent.com/81389879/155845648-0adb21e1-ea40-49e6-8392-7cd28223ac65.png)
