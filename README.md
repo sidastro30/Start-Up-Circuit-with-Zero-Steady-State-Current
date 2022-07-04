@@ -1,5 +1,10 @@
+
 # Start-Up Circuit with Zero Steady State Current
-This repository presents the design of Start-Up Circuit with Zero Steady State Current. It is implemented on Synopsys Custom Compiler in 28nm technology node.
+##### [Design recognized under Outstanding Category](https://hackathoniith.in/result-outstanding)
+```
+This repository presents the design of Start-Up Circuit with Zero Steady State Current. 
+It is implemented on Synopsys Custom Compiler in 28nm technology node.
+```
 ###### Keywords: Start-Up Circuit, Voltage Reference, Current Reference, Low Power Integrated Circuits
 
  
@@ -61,6 +66,9 @@ Startup circuit with zero steady state current have been simulated. Unlike conve
 
 - ![image](https://user-images.githubusercontent.com/81389879/155874018-fed073f8-7c6f-4229-82b5-b562ac791406.png)
   - Fig3. Steady State :  Start-Up Circuit with power down & Vdd Ramp-up(left),Conventional Start-Up(right)
+
+## AUTHOR
+Siddharth Pal, Indian Institute of Technology Kharagpur- IIT KGP 
 
 ## Acknowledgements
   - [Synopsys India](https://www.synopsys.com/)
